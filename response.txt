@@ -1,0 +1,161 @@
+Response 1 : Skus has cost
+{
+    "costDate": "2021/08/01",
+    "countryCode": "559",
+    "countryDesc": "Singapore",
+    "deliveryMethod": "Delivered Duty Paid",
+    "mot": "AIR",
+    "outputCurrency": "USD",
+    "baseSkuCostDetails": [
+        {
+            "prodIdBase": "20C02AV",
+            "skuCostElements": {
+                "MATRL": 107.79,
+                "DDUTX": 0.0,
+                "OVBLC": 3.88,
+                "VTRDX": 0.0,
+                "VTRTR": 0.0,
+                "DDUTR": 0.0
+            },
+            "costStatus": "COMPLETE",
+            "tCos": 111.67,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F2YX"
+            }
+        },
+        {
+            "prodIdBase": "20C27AV",
+            "skuCostElements": {
+                "MATRL": 3.81,
+                "DDUTX": 0.0,
+                "OVBLC": 0.14,
+                "VTRDX": 0.0,
+                "VTRTR": 0.0,
+                "DDUTR": 0.0
+            },
+            "costStatus": "COMPLETE",
+            "tCos": 3.95,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F0D0"
+            }
+        },
+        {
+            "prodIdBase": "20B59AV",
+            "skuCostElements": {
+                "MATRL": 66.26,
+                "DDUTX": 0.0,
+                "OVBLC": 2.39,
+                "VTRDX": 0.0,
+                "VTRTR": 0.0,
+                "DDUTR": 0.0
+            },
+            "costStatus": "COMPLETE",
+            "tCos": 68.65,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F2YB"
+            }
+        },
+        {
+            "prodIdBase": "20C06AV",
+            "skuCostElements": {
+                "MATRL": 75.0,
+                "DDUTX": 0.0,
+                "OVBLC": 2.7,
+                "VTRDX": 0.0,
+                "VTRTR": 0.0,
+                "DDUTR": 0.0
+            },
+            "costStatus": "COMPLETE",
+            "tCos": 77.7,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F0CV"
+            }
+        }
+    ],
+    "rapidSkuCostDetails": {
+        "prodIdBase": "R345TP",
+        "skuCostElements": {
+            "VTRDX": 0.0,
+            "OVBLC": 9.11,
+            "VTRTR": 0.0,
+            "DDUTX": 0.0,
+            "DDUTR": 0.0,
+            "MATRL": 252.86
+        },
+        "costStatus": "IN_COMPLETE",
+        "tCos": 261.97,
+        "maskElements": {
+            "pl": "2Q",
+            "platform": null
+        }
+    },
+    "accessDeniedProducts": {}
+}
+
+
+Response 2: No Cost
+{
+    "costDate": "2021/08/01",
+    "countryCode": "000",
+    "countryDesc": "United States",
+    "deliveryMethod": "Delivered Duty Paid",
+    "mot": "AIR",
+    "outputCurrency": "USD",
+    "baseSkuCostDetails": [
+        {
+            "prodIdBase": "20C02AV",
+            "skuCostElements": {},
+            "costStatus": "NOT_FOUND",
+            "tCos": 0.0,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F2YX"
+            }
+        },
+        {
+            "prodIdBase": "20C27AV",
+            "skuCostElements": {},
+            "costStatus": "NOT_FOUND",
+            "tCos": 0.0,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F0D0"
+            }
+        },
+        {
+            "prodIdBase": "20B59AV",
+            "skuCostElements": {},
+            "costStatus": "NOT_FOUND",
+            "tCos": 0.0,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F2YB"
+            }
+        },
+        {
+            "prodIdBase": "20C06AV",
+            "skuCostElements": {},
+            "costStatus": "NOT_FOUND",
+            "tCos": 0.0,
+            "maskElements": {
+                "pl": "AN",
+                "platform": "F0CV"
+            }
+        }
+    ],
+    "rapidSkuCostDetails": {
+        "prodIdBase": "R345TP",
+        "skuCostElements": {},
+        "costStatus": "NOT_FOUND",
+        "tCos": 0.0,
+        "maskElements": {
+            "pl": "2Q",
+            "platform": null
+        }
+    },
+    "accessDeniedProducts": {}
+}

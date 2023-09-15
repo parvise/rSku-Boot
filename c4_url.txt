@@ -1,0 +1,61 @@
+
+C4 manager:
+
+Need to Remove--> http://c4manager.houston.hp.com:30028/ 
+Add-->http://c4manager.austin.hp.com:30028/
+
+Need to Remove--> https://c4manager.houston.hp.com:30029/ 
+Add-->https://c4manager.austin.hp.com:30029/  RITM0799806
+
+Need to Remove--> https://c4manager.houston.hp.com/ 
+Add-->https://c4manager.austin.hp.com   RITM0799807
+
+SOAP URL:
+
+Need to Remove--> http://c4soap.houston.hp.com:30004/C4OutputPort?wsdl 
+Add-->http://c4soap.austin.hp.com:30004/C4OutputPort?wsdl  RITM0799808
+
+Need to Remove--> http://c4soap.houston.hp.com:30004/C4LineItemsOutputPort?wsdl
+Add-->http://c4soap.austin.hp.com:30004/C4LineItemsOutputPort?wsdl  RITM0799810
+
+Need to Remove--> http://c4soap.houston.hp.com:30004/C4SimplifiedOutputPort?wsdl 
+Add-->http://c4soap.austin.hp.com:30004/C4SimplifiedOutputPort?wsdl  RITM0799811
+
+Need to Remove--> https://c4soap.houston.hp.com/C4OutputPort?wsdl 
+Add-->http://c4soap.austin.hp.com/C4OutputPort?wsdl  RITM0799813
+
+Need to Remove--> https://c4soap.houston.hp.com:30005/C4OutputPort?wsdl 
+Add-->https://c4soap.austin.hp.com:30005/C4OutputPort?wsdl  RITM0799816
+
+Need to Remove--> http://c4soap.houston.hp.com:30004/C4SimplifiedConnectionPort?wsdl
+Add-->http://c4soap.austin.hp.com:30004/C4SimplifiedConnectionPort?wsdl  RITM0799822
+
+Need to Remove--> http://c4soap.houston.hp.com:30004/C4DrillDownOutputPort?wsdl 
+Add-->http://c4soap.austin.hp.com:30004/C4DrillDownOutputPort?wsdl  RITM0799830
+
+C4 SECURITY:	  
+
+Need to Remove--> http://c4security.houston.hp.com:30024/ 
+Add-->http://c4security.austin.hp.com:30024/  RITM0799839
+
+Need to Remove--> https://c4security.houston.hp.com:30025/ 
+Add-->https://c4security.austin.hp.com:30025/  RITM0799840
+
+Need to Remove--> https://c4security.houston.hp.com/ 
+Add-->https://c4security.austin.hp.com/  RITM0799841
+
+console:
+
+Need to Remove--> http://g4t9005g.houston.hpicorp.net:30028/ 
+Add-->http://g7t11055g.inc.hpicorp.net:30000/console/login/LoginForm.jsp  RITM0799842
+
+Need to Remove--> http://g9t6890g.houston.hpicorp.net:30028/ 
+Add-->http://g7t11056g.inc.hpicorp.net:30000/console/login/LoginForm.jsp  RITM0799850
+
+wsdl:
+
+Need to Remove--> http://g4t9005g.houston.hpicorp.net:30004/C4OutputPort?wsdl 
+Add-->http://g7t11055g.inc.hpicorp.net:30004/C4OutputPort?wsdl  RITM0799852
+
+Need to Remove-->http://g9t6890g.houston.hpicorp.net:30004/C4OutputPort?wsdl 
+Add-->http://g7t11056g.inc.hpicorp.net:30004/C4OutputPort?wsdl RITM0799856

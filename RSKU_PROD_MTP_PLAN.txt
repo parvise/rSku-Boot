@@ -1,0 +1,267 @@
+RFC- CHG0065180 
+############### RSKU MTP PLAN MAR-19th ####################
+1).DB Related Changes INFOSHU DB
+  a). Update the package C4LOGINVALIDATE.validateLogin & complile to add below code
+     AND (UP.pswd_ = i_PASSWORD  or i_appname='C4SOAP' or i_appname='C4RSKU') 
+  b). Create $bmiservice001 service account using C4 - Security Manager and assign C4RSKU as appname & Groups we can use as refernce for ITG.
+  3). Insert the below query to available App Name as C4RSKU
+      insert into t_application values('C4RSKU','Rsku WebService'); // Rapid SKU TCost update in C4
+	  
+2). Server Related Configurations (Infra Team needed for help which is optional)
+   a). Create the below directories & add files below one copy from ITG to PROD for safer side on Both Prod APP servers.
+    /opt/sasuapps/c4/domain/c4/applications/rSku/logs
+	/opt/sasuapps/c4/domain/c4/applications/c4managerHPI/c4/staging/c4ld/ds2
+		c4RskuConfig.properties
+		c4Rsku_ITG_DB.properties  (_PROD_)
+		c4Rsku.war
+	/c4/apps/epam/property (#Optional)
+		cacerts.jks
+		cacerts_pub.cer
+		epam_config.properties
+	b). Take help from Webhosting team to deploy the war file and maintain the Node Manager Servers for seperate to C4RSKU-REST-API in case of Dev team not able to do.
+	
+	http://g8t00244g.inc.hpicorp.net:30000/c4Rsku/getC4Cost
+	http://g8t00245g.inc.hpicorp.net:30000/c4Rsku/getC4Cost
+	
+	http://g7t11056g.inc.hpicorp.net:30000/c4Rsku/getC4Cost
+	http://g7t11055g.inc.hpicorp.net:30000/c4Rsku/getC4Cost
+	
+	http://g7t11055g.inc.hpicorp.net:30000/c4Rsku/allPriceDescriptors
+	http://g7t11056g.inc.hpicorp.net:30000/c4Rsku/allPriceDescriptors
+	
+	c). Modify the Importer job receipents mail-ids for this key $(rsku.staging.importer.sender.not.mailids)
+	d). Change the environment ITG to PROD for this key $(rsku.services.env)
+	
+3). LLB Team is required to configure the above URL's	
+
+4). Server Details Prod-C4
+	New batch Server :
+	1)g7t13292x.inc.hpicorp.net
+	2)g7t13293x.inc.hpicorp.net
+	New App server
+	1) g7t11055g.inc.hpicorp.net
+	2) g7t11056g.inc.hpicorp.net
+	
+	http://g7t11055g.inc.hpicorp.net:30000/console/console.portal?_nfpb=true&_pageLabel=WLSServerControlTablePage
+	http://g7t11056g.inc.hpicorp.net:30000/console/console.portal?_nfpb=true&_pageLabel=WLSServerControlTablePage
+
+
+	
+	/c4/apps/epam/property/epam_config.properties
+	
+	
+	
+	
+	
+	########################     Technologies prefered for C4 R-Sku Requirement     ##########
+
+1).Spring Boot (or)  Rest-Full webservices
+2).Java 1.8/ 1.6
+3).Oracle DB 
+4). Weblogic 11g App-Server or Tomcat V.8
+
+
+###############     User_Stories    ###########################
+1). Extract the request Object from R-Sku team to C4 and apply the different validations. 
+2). Load the C4 Master Tables into Cache like, Geo_codes,Price_descriptors,MOT,DeliveryMethod,Product Lines with Mask Elements etc. 
+3). Analyze the existing SP which is available in C4 , and how to integrate those SP's into R-SKU requirement. 
+4). After validating the request object, pulll the Cost info into POJO objects. 
+5). Extract the SKU's cost elements and Roll up cost values as Single R-SKU cost. 
+6). Store the values (Insert/Update the R-Sku cost elements into C4 DB has a Quarterly Cost/WorldWide. 
+7). Generate the Response to the R-Sku Team which includes the RSku cost has a final response. 
+
+
+
+http://localhost:8081/getCc4Cost
+http://localhost:8081/allPriceDescriptors
+
+RSKU Restful WebService User Stories
+
+1). Design the RSKU request attributes & perform the user input validations.
+2). Validate the SKUs are belonging to C4 System or Not.
+3). Request to C4 DB system to pull the Cost individual cost elements of Valid SKU's.
+4). Accumulate/ Roll-up the cost to a single R-SKU individual cost element.
+5). Prepare the Cost files to upload the batch process for the importer job to process & stores into C4 DB system & receives Notification mail.
+6). Apply the T_COS formula for All Base SKU's & RSKU which calls the Total Cost of the SKU.
+7). Validate the Mask Elements Required/Not-Required for PL level and apply the Cost status (COMPLETE, IN-COMPLETE, WARNING, NOT_FOUND) in final Response.
+
+Notes:-
+a). Only One request & one Response (No two services).
+b). Only considering Base SKU's , localization is ignored.
+c). MCC cost calculation is Not applicable, Only Base SKU cost considered.
+d). By default, RSKU service considered USD currency for output cost as final response. Not considered other currencies.
+e). RSKU has only one will get from Request object , which contains (PL,Sku Name & desc etc) Rsku is part of Phweb system or not?
+f). Insert/Store the RSKU cost elements information into DB has a Worldwide & Quarterly cost irrespective user inputs.
+
+
+
+
+keytool -genkey -alias c4hpepam -keyalg RSA -keystore "C:\temp\src\basicpbpsdemo\cacerts.jks"
+
+keytool -export -alias c4hpepam -file "C:\temp\src\basicpbpsdemo\cacerts_public_cer.cer" -keystore "C:\temp\src\basicpbpsdemo\cacerts.jks"
+
+
+keytool -genkey -alias c4hpepam -keyalg RSA -keystore "C:\temp\src\basicpbpsdemo\cacerts.jks"
+
+keytool -export -alias c4hpepam -file "C:\temp\src\basicpbpsdemo\example1.cer" -keystore "C:\temp\src\basicpbpsdemo\cacerts.jks"
+keytool -export -alias c4hpepam -file "C:\temp\src\basicpbpsdemo\latest\root.cer" -keystore "C:\temp\src\basicpbpsdemo\latest\cacerts.jks"
+keytool -export -alias c4hpepam -file "C:\temp\src\basicpbpsdemo\test\root.cer" -keystore "C:\temp\src\basicpbpsdemo\test\cacerts.jks"
+
+keytool -import -alias cacerts -keystore "C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts" -file example1.cer
+
+keytool -import -v -trustcacerts -alias keyAlias -file cacerts_pub.cer -keystore cacerts.jks -keypass
+
+After get .cer file from https url
+Important = keytool -import -v -trustcacerts -alias keyAlias -file epam.cer -keystore epam.jks -keypass changeit
+Important = keytool -import -v -trustcacerts -alias keyAlias -file keystore_ca.cer -keystore keystore_ca.jks -keypass changeit
+
+Raj = C:\Program Files\Java\jdk1.8.0_311\jre\bin>keytool -import -noprompt -trustcacerts -alias wcs_Cert -file D:\ssl_cert\Wcs_export_cert.cer -keystore "C:\Program Files\Java\jdk1.8.0_311\jre\lib\security\cacerts" -storepass changeit
+Certificate was added to keystore
+C:\temp\src\basicpbpsdemo\latest
+
+D:\epam_cer\testing_cer\EPAM_DC\Today_20\epam-dc.cer
+
+keytool -import -noprompt -trustcacerts -alias wcs_Cert -file D:\epam_cer\testing_cer\EPAM_DC\Today_20\epam-dc.cer -keystore "C:\Program Files\Java\jdk1.8.0_201\jre\lib\security\cacerts" -storepass changeit
+
+keytool -v -list -keystore C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts
+
+
+keytool -v -list -keystore 
+
+
+https://epam-itg.corp.hpicloud.net/BeyondTrust/api/public/v3/ManagedAccounts?systemName=c4infi.inc.hpicorp.net (Db Instance: C4INFI, Port:1525)&accountName=infoshu
+
+
+keytool -genkey -alias file -keyalg RSA -keystore "C:\test\file.jks"
+
+keytool -import -alias cacerts -keystore "C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts" -file example1.cer
+
+
+
+set JAVA_OPTIONS=%JAVA_OPTIONS% -DUseSunHttpHandler=true
+
+set JAVA_OPTIONS=%JAVA_OPTIONS% -DUseSunHttpHandler=true
+
+new URL(null, urlstr, new sun.net.www.protocol.http.Handler());
+
+ Error: sun.net.www.protocol.http.HttpURLConnection cannot be cast to javax.net.ssl.HttpsURLConnection
+ 
+ sun.net.www.protocol.https.HttpsURLConnectionImpl cannot be cast to sun.net.www.protocol.http.HttpURLConnection
+
+ 
+ Error: weblogic.net.http.SOAPHttpsURLConnection cannot be cast to sun.net.www.protocol.https.HttpsURLConnectionImpl
+ 
+ 1). After incorporation Epam interface with C4 where deploys on Weblogic C4 can't retrive the password.
+ 2). Epam Team is not well known the Java, & there is no well tested methodology for Java Code.
+ 3). At present from our own to resolve how to get EPam code resolve with Weblogic.
+ 4). 
+ 
+ 
+ 
+ 
+ 
+ 
+ -d64 -Xms2048m -Xmx2048m -XX:MaxPermSize=2048m -Dappserver.home.dir=/opt/sasuapps/c4/domain/c4/servers/soapV5 -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.protocolVersion=TLSv1.1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.1 -Dweblogic.security.SSL.verbose -Dweblogic.ssl.JSSEEnabled=true  -Dssl.debug=true -Dweblogic.security.SSL.enableJSSE=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dhttps.protocols=TLSv1.1,TLSv1.2 -DUseSunHttpHandler=true -Dweblogic.security.disableNullCipher=true -Dweblogic.security.SSL.allowUnencryptedNullCipher=false -Dweblogic.log.LoggerSeverity=Debug -Dweblogic.debug.DebugSecuritySSL=true -DUseJSSECompatibleHttpsHandler=true
+
+ 
+ 
+ -d64 -Xms2048m -Xmx2048m -XX:MaxPermSize=2048m -Dappserver.home.dir=/opt/sasuapps/c4/domain/c4/servers/soapV5_03 -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.protocolVersion=TLSv1.1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.1 -Dweblogic.security.SSL.verbose -Dweblogic.ssl.JSSEEnabled=true   -Dweblogic.security.SSL.enableJSSE=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dhttps.protocols=TLSv1.1,TLSv1.2  -DUseSunHttpHandler=true -Dweblogic.security.disableNullCipher=true -Dweblogic.security.SSL.allowUnencryptedNullCipher=false -Dweblogic.debug.DebugSecuritySSL=true -DUseJSSECompatibleHttpsHandler=true
+ 
+ 
+ 
+ -d64 -Xms2048m -Xmx2048m -XX:MaxPermSize=1024m -Dappserver.home.dir=/opt/sasuapps/c4/domain/c4/servers/C4DashBoard -Dweblogic.Stdout=/opt/sasuapps/c4/domain/c4/servers/C4Dashboard/logs/c4dashboard_stdout.log -Dweblogic.Stderr=/opt/sasuapps/c4/domain/c4/servers/C4Dashboard/logs/c4dashboard_stderr.log -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.protocolVersion=TLS1.1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.1 -Dweblogic.security.SSL.verbose -Dweblogic.ssl.JSSEEnabled=true   -Dweblogic.security.SSL.enableJSSE=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dhttps.protocols=TLSv1.1,TLSv1.2  -DUseSunHttpHandler=true -Dweblogic.security.disableNullCipher=true -Dweblogic.security.SSL.allowUnencryptedNullCipher=false -Dweblogic.debug.DebugSecuritySSL=true
+
+
+ 
+ Shashi
+ 
+ C:\Program Files\Java\jdk1.7.0_80\jre\lib\security
+ 
+ 
+ keytool -import -noprompt -trustcacerts -alias test1_Certf -file D:\epam_cer\shashi\epam-dc.cer -keystore "C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts" -storepass changeit
+ 
+ keytool -import -noprompt -trustcacerts -alias test1_Certf -file D:\epam_cer\shashi\keystore_ca_both.cer -keystore "C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts" -storepass changeit
+ 
+ keytool -import -noprompt -trustcacerts -alias test1_Certf -file D:\epam_cer\testing_cer\EPAM_DC\keystore_ca.cer -keystore "C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts" -storepass changeit
+ 
+ 
+ D:\epam_cer\testing_cer\EPAM_DC\keystore_ca.cer
+ 
+ 
+ 
+ 
+ 
+ 245
+ -d64 -Xms2048m -Xmx2048m -XX:MaxPermSize=1024m -Dappserver.home.dir=/opt/sasuapps/c4/domain/c4/servers/C4DashBoard -Dweblogic.Stdout=/opt/sasuapps/c4/domain/c4/servers/C4Dashboard/logs/c4dashboard_stdout.log -Dweblogic.Stderr=/opt/sasuapps/c4/domain/c4/servers/C4Dashboard/logs/c4dashboard_stderr.log -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.protocolVersion=TLS1.1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.1 -Dweblogic.security.SSL.verbose -Dweblogic.ssl.JSSEEnabled=true   -Dweblogic.security.SSL.enableJSSE=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dhttps.protocols=TLSv1.1,TLSv1.2  -DUseSunHttpHandler=true -Dweblogic.security.disableNullCipher=true -Dweblogic.security.SSL.allowUnencryptedNullCipher=false -Dweblogic.debug.DebugSecuritySSL=true
+
+ 
+ 244
+ -d64 -XX:PermSize=2048m -XX:MaxPermSize=2048m -Xms2048m -Xmx2048m -Dappserver.home.dir=/opt/sasuapps/c4/domain/c4/servers/c4security -Dweblogic.Stdout=/opt/sasuapps/c4/domain/c4/servers/c4security/logs/c4security_stdout.log -Dweblogic.Stderr=/opt/sasuapps/c4/domain/c4/servers/c4security/logs/c4security_stdout.log -Djava.net.preferIPv4Stack=true -Dweblogic.security.SSL.protocolVersion=TLSv1.1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.1 -Dweblogic.security.SSL.verbose -Dweblogic.ssl.JSSEEnabled=true   -Dweblogic.security.SSL.enableJSSE=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dhttps.protocols=TLSv1.1,TLSv1.2  -DUseSunHttpHandler=true -Dweblogic.security.disableNullCipher=true -Dweblogic.security.SSL.allowUnencryptedNullCipher=false -Dweblogic.debug.DebugSecuritySSL=true -Dweblogic.security.SSL.protocolVersion=TLSv1.1 -Dweblogic.security.SSL.minimumProtocolVersion=TLSv1.1
+
+ 
+ CREATE USER EPAM_C4APP_ITGFA IDENTIFIED BY Epam_itg_2021**%;
+GRANT CONNECT TO EPAM_C4APP_ITGFA;
+To grant permission to the functional account to change passwords on a managed account:
+GRANT CONNECT TO EPAM_C4APP_ITGFA;
+GRANT ALTER USER TO EPAM_C4APP_ITGFA;
+GRANT SELECT ON DBA_USERS TO EPAM_C4APP_ITGFA;
+
+Configure the Host
+On the Oracle platform, you must configure the following settings:
+•	In Oracle Net Manager, the host name IP address must be explicitly set as a listener.
+•	Also in Oracle Net Manager, set the servic
+
+
+INC4791497
+Epam_itg_2021**%
+
+
+
+425580
+
+
+
+ALTER USER
+l CONNECT
+l SELECT ON DBA_USERS (Required for auto Discovery of Oracle instance managed accounts.)
+
+
+############### RSKU MTP PLAN MAR-19th ####################
+1).DB Related Changes
+  a). Update the package C4LOGINVALIDATE.validateLogin & complile to add below code
+     AND (UP.pswd_ = i_PASSWORD  or i_appname='C4SOAP' or i_appname='C4RSKU') 
+  b). Create $bmiservice001 service account using C4 - Security Manager and assign C4RSKU as appname & Groups we can use as refernce for ITG.
+  3). Insert the below query to available App Name as C4RSKU
+      insert into t_application values('C4RSKU','Rsku WebService'); // Rapid SKU TCost update in C4
+	  
+2). Server Related Configurations (Infra Team needed for help which is optional)
+   a). Create the below directories & add files below one copy from ITG to PROD for safer side on Both Prod APP servers.
+    /opt/sasuapps/c4/domain/c4/applications/rSku/logs
+		c4RskuConfig.properties
+		c4Rsku_ITG_DB.properties  (_PROD_)
+		c4Rsku.war
+	/c4/apps/epam/property (#Optional)
+		cacerts.jks
+		cacerts_pub.cer
+		epam_config.properties
+	b). Take help from Webhosting team to deploy the war file and maintain the Node Manager Servers for seperate to C4RSKU-REST-API in case of Dev team not able to do.
+	
+	http://g8t00244g.inc.hpicorp.net:30000/c4Rsku/getC4Cost
+	http://g8t00245g.inc.hpicorp.net:30000/c4Rsku/getC4Cost
+	
+	c). Modify the Importer job receipents mail-ids for this key $(rsku.staging.importer.sender.not.mailids)
+	d). Change the environment ITG to PROD for this key $(rsku.services.env)
+	
+3). LLB Team is required to configure the above URL's	
+
+4). Server Details Prod-C4
+	New batch Server :
+	1)g7t13292x.inc.hpicorp.net
+	2)g7t13293x.inc.hpicorp.net
+	New App server
+	1) g7t11055g.inc.hpicorp.net
+	2) g7t11056g.inc.hpicorp.net
+	
+	http://g7t11055g.inc.hpicorp.net:30000/console/console.portal?_nfpb=true&_pageLabel=WLSServerControlTablePage
+	http://g7t11056g.inc.hpicorp.net:30000/console/console.portal?_nfpb=true&_pageLabel=WLSServerControlTablePage
+

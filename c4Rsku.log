@@ -1,0 +1,170 @@
+[2023-08-25 14:22:00,774][]  INFO(ContextLoader.java:285) - Root WebApplicationContext: initialization started
+[2023-08-25 14:22:01,095][]  INFO(AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Aug 25 14:22:01 IST 2023]; root of context hierarchy
+[2023-08-25 14:22:01,331][]  INFO(AutowiredAnnotationBeanPostProcessor.java:153) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2023-08-25 14:22:01,364][]  INFO(ContextLoader.java:325) - Root WebApplicationContext: initialization completed in 584 ms
+[2023-08-25 14:22:01,615][]  INFO(FrameworkServlet.java:484) - FrameworkServlet 'SpringDispatcher': initialization started
+[2023-08-25 14:22:01,623][]  INFO(AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'SpringDispatcher-servlet': startup date [Fri Aug 25 14:22:01 IST 2023]; parent: Root WebApplicationContext
+[2023-08-25 14:22:01,777][]  INFO(AnnotationConfigWebApplicationContext.java:243) - Found 23 annotated classes in package [com.hp.c4.rsku.rSku]
+[2023-08-25 14:22:02,192][]  WARN(ConfigurationClassEnhancer.java:301) - @Bean method RskuPropertyConfig.placeHolderConfigurer is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details
+[2023-08-25 14:22:02,209][]  INFO(RskuPropertyConfig.java:32) - Properties are loaded
+[2023-08-25 14:22:02,221][]  INFO(AutowiredAnnotationBeanPostProcessor.java:153) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2023-08-25 14:22:02,442][]  INFO(LoadRskuDBService.java:119) - Sql UTIL for ONSI DB is initialized completes : 0
+[2023-08-25 14:22:03,903][]  INFO(LoadRskuDBService.java:46) - Loading All C4 DB properties into C4 Env = PRO:D:\Pervez\C4\EPAM\API Samples\PRO\c4Rsku_PRO_DB.properties
+[2023-08-25 14:22:03,906][]  INFO(LoadRskuDBService.java:60) -  ***** In Try block: FileInputStream in is closed.  
+[2023-08-25 14:22:03,907][]  INFO(LoadRskuDBService.java:70) -  *****  In  block :  BufferedFileReader - tLineReader  is closed
+[2023-08-25 14:22:03,907][]  INFO(LoadRskuDBService.java:78) - Pool creation started for =c4.dbPool.OnlineShort
+[2023-08-25 14:22:03,924][]  INFO(C4EpamApi.java:47) - EPam Property File Path : D:/Pervez/C4/EPAM/API Samples/PRO/epam_config.properties
+[2023-08-25 14:22:03,929][]  INFO(C4EpamApi.java:90) - *****************************************************************************************************
+[2023-08-25 14:22:03,937][]  INFO(C4EpamApi.java:107) - Connecting to External API...... For EPAM Authentication........Started ....{EPAM_C4_API_HOST_NAME_PWD_CACHE=15.63.21.3, EPAM_ACCOUNT_NAME=c4prod, EPAM_C4_API_RUN_AS_USER=auth.hpicorp.net\EPAMC4PRODRUNAS, EPAM_C4_API_KEY_STORE_PWD=changeit, EPAM_C4_API_KEY=ODU2MWZkMTY4YmQwY2I4OTg4MzljNWFmMzhlZmQ1MDg4Nzg3MDU1Y2YxNWEyMmRlY2Y0Y2MxZmNmYzk1MzhkNzAyMzFiZTFiZmIwMTNiOTgzYmNiNjViMDQ3MzdlYzE1MTQxOTg4M2EwYWNjNmUxYjNjY2JjMmYwZWU3MjI0N2U=, EPAM_SYSTEM_NAME=c4onsp.inc.hpicorp.net%20(Db%20Instance:%20C4ONSP,%20Port:1525), EPAM_C4_API_HOST_NAME_LLB=epam-dc-prod.corp.hpicloud.net, EPAM_C4_API_KEY_STORE_FILE=D:/Pervez/C4/EPAM/API Samples/PRO/keystore_ca.cer}
+[2023-08-25 14:22:04,318][]  INFO(C4EpamApi.java:126) - Signed in as EPAMC4PRODRUNAS
+[2023-08-25 14:22:04,383][]  INFO(C4EpamApi.java:131) - Found System|Account: c4onsp.inc.hpicorp.net (Db Instance: c4onsp, Port:1525)|c4prod
+[2023-08-25 14:22:04,447][]  INFO(C4EpamApi.java:142) - Request ID: 8649533
+[2023-08-25 14:22:04,511][]  INFO(C4EpamApi.java:147) - ---
+[2023-08-25 14:22:04,512][]  INFO(C4EpamApi.java:148) - **********************
+[2023-08-25 14:22:04,512][]  INFO(C4EpamApi.java:149) - ---
+[2023-08-25 14:22:04,576][]  INFO(C4EpamApi.java:153) - Request checked-in
+[2023-08-25 14:22:04,640][]  INFO(C4EpamApi.java:157) - Signed out
+[2023-08-25 14:22:04,640][]  INFO(C4EpamApi.java:159) - *****************************************************************************************************
+[2023-08-25 14:22:04,641][]  INFO(CdbConnectionMgr.java:67) - Pool created successfully for : c4.dbPool.OnlineShort
+[2023-08-25 14:22:04,642][]  INFO(LoadRskuDBService.java:82) - Pool creation started for =c4.dbPool.Offline
+[2023-08-25 14:22:04,642][]  INFO(C4EpamApi.java:90) - *****************************************************************************************************
+[2023-08-25 14:22:04,643][]  INFO(C4EpamApi.java:107) - Connecting to External API...... For EPAM Authentication........Started ....{EPAM_C4_API_HOST_NAME_PWD_CACHE=15.63.21.3, EPAM_ACCOUNT_NAME=c4prod, EPAM_C4_API_RUN_AS_USER=auth.hpicorp.net\EPAMC4PRODRUNAS, EPAM_C4_API_KEY_STORE_PWD=changeit, EPAM_C4_API_KEY=ODU2MWZkMTY4YmQwY2I4OTg4MzljNWFmMzhlZmQ1MDg4Nzg3MDU1Y2YxNWEyMmRlY2Y0Y2MxZmNmYzk1MzhkNzAyMzFiZTFiZmIwMTNiOTgzYmNiNjViMDQ3MzdlYzE1MTQxOTg4M2EwYWNjNmUxYjNjY2JjMmYwZWU3MjI0N2U=, EPAM_SYSTEM_NAME=c4offp.inc.hpicorp.net%20(Db%20Instance:%20C4OFFP,%20Port:1525), EPAM_C4_API_HOST_NAME_LLB=epam-dc-prod.corp.hpicloud.net, EPAM_C4_API_KEY_STORE_FILE=D:/Pervez/C4/EPAM/API Samples/PRO/keystore_ca.cer}
+[2023-08-25 14:22:04,706][]  INFO(C4EpamApi.java:126) - Signed in as EPAMC4PRODRUNAS
+[2023-08-25 14:22:04,771][]  INFO(C4EpamApi.java:131) - Found System|Account: c4offp.inc.hpicorp.net (Db Instance: c4offp, Port:1525)|c4prod
+[2023-08-25 14:22:04,835][]  INFO(C4EpamApi.java:142) - Request ID: 8649532
+[2023-08-25 14:22:04,899][]  INFO(C4EpamApi.java:147) - ---
+[2023-08-25 14:22:04,899][]  INFO(C4EpamApi.java:148) - **********************
+[2023-08-25 14:22:04,899][]  INFO(C4EpamApi.java:149) - ---
+[2023-08-25 14:22:04,963][]  INFO(C4EpamApi.java:153) - Request checked-in
+[2023-08-25 14:22:05,027][]  INFO(C4EpamApi.java:157) - Signed out
+[2023-08-25 14:22:05,028][]  INFO(C4EpamApi.java:159) - *****************************************************************************************************
+[2023-08-25 14:22:05,028][]  INFO(CdbConnectionMgr.java:67) - Pool created successfully for : c4.dbPool.Offline
+[2023-08-25 14:22:05,028][]  INFO(LoadRskuDBService.java:86) - Pool creation started for =c4.dbPool.Util
+[2023-08-25 14:22:05,029][]  INFO(C4EpamApi.java:90) - *****************************************************************************************************
+[2023-08-25 14:22:05,029][]  INFO(C4EpamApi.java:107) - Connecting to External API...... For EPAM Authentication........Started ....{EPAM_C4_API_HOST_NAME_PWD_CACHE=15.63.21.3, EPAM_ACCOUNT_NAME=gpssnap, EPAM_C4_API_RUN_AS_USER=auth.hpicorp.net\EPAMC4PRODRUNAS, EPAM_C4_API_KEY_STORE_PWD=changeit, EPAM_C4_API_KEY=ODU2MWZkMTY4YmQwY2I4OTg4MzljNWFmMzhlZmQ1MDg4Nzg3MDU1Y2YxNWEyMmRlY2Y0Y2MxZmNmYzk1MzhkNzAyMzFiZTFiZmIwMTNiOTgzYmNiNjViMDQ3MzdlYzE1MTQxOTg4M2EwYWNjNmUxYjNjY2JjMmYwZWU3MjI0N2U=, EPAM_SYSTEM_NAME=c4onsp.inc.hpicorp.net%20(Db%20Instance:%20C4ONSP,%20Port:1525), EPAM_C4_API_HOST_NAME_LLB=epam-dc-prod.corp.hpicloud.net, EPAM_C4_API_KEY_STORE_FILE=D:/Pervez/C4/EPAM/API Samples/PRO/keystore_ca.cer}
+[2023-08-25 14:22:05,093][]  INFO(C4EpamApi.java:126) - Signed in as EPAMC4PRODRUNAS
+[2023-08-25 14:22:05,158][]  INFO(C4EpamApi.java:131) - Found System|Account: c4onsp.inc.hpicorp.net (Db Instance: c4onsp, Port:1525)|gpssnap
+[2023-08-25 14:22:05,222][]  INFO(C4EpamApi.java:142) - Request ID: 8649534
+[2023-08-25 14:22:05,286][]  INFO(C4EpamApi.java:147) - ---
+[2023-08-25 14:22:05,286][]  INFO(C4EpamApi.java:148) - **********************
+[2023-08-25 14:22:05,287][]  INFO(C4EpamApi.java:149) - ---
+[2023-08-25 14:22:05,350][]  INFO(C4EpamApi.java:153) - Request checked-in
+[2023-08-25 14:22:05,414][]  INFO(C4EpamApi.java:157) - Signed out
+[2023-08-25 14:22:05,415][]  INFO(C4EpamApi.java:159) - *****************************************************************************************************
+[2023-08-25 14:22:05,415][]  INFO(CdbConnectionMgr.java:67) - Pool created successfully for : c4.dbPool.Util
+[2023-08-25 14:22:05,415][]  INFO(LoadRskuDBService.java:90) - Pool creation started for =c4.dbPool.c4security
+[2023-08-25 14:22:05,416][]  INFO(C4EpamApi.java:90) - *****************************************************************************************************
+[2023-08-25 14:22:05,416][]  INFO(C4EpamApi.java:107) - Connecting to External API...... For EPAM Authentication........Started ....{EPAM_C4_API_HOST_NAME_PWD_CACHE=15.63.21.3, EPAM_ACCOUNT_NAME=infoshu, EPAM_C4_API_RUN_AS_USER=auth.hpicorp.net\EPAMC4PRODRUNAS, EPAM_C4_API_KEY_STORE_PWD=changeit, EPAM_C4_API_KEY=ODU2MWZkMTY4YmQwY2I4OTg4MzljNWFmMzhlZmQ1MDg4Nzg3MDU1Y2YxNWEyMmRlY2Y0Y2MxZmNmYzk1MzhkNzAyMzFiZTFiZmIwMTNiOTgzYmNiNjViMDQ3MzdlYzE1MTQxOTg4M2EwYWNjNmUxYjNjY2JjMmYwZWU3MjI0N2U=, EPAM_SYSTEM_NAME=c4infp.inc.hpicorp.net%20(Db%20Instance:%20C4INFP,%20Port:1525), EPAM_C4_API_HOST_NAME_LLB=epam-dc-prod.corp.hpicloud.net, EPAM_C4_API_KEY_STORE_FILE=D:/Pervez/C4/EPAM/API Samples/PRO/keystore_ca.cer}
+[2023-08-25 14:22:05,480][]  INFO(C4EpamApi.java:126) - Signed in as EPAMC4PRODRUNAS
+[2023-08-25 14:22:05,545][]  INFO(C4EpamApi.java:131) - Found System|Account: c4infp.inc.hpicorp.net (Db Instance: c4infp, Port:1525)|infoshu
+[2023-08-25 14:22:05,609][]  INFO(C4EpamApi.java:142) - Request ID: 8649531
+[2023-08-25 14:22:05,673][]  INFO(C4EpamApi.java:147) - ---
+[2023-08-25 14:22:05,673][]  INFO(C4EpamApi.java:148) - **********************
+[2023-08-25 14:22:05,674][]  INFO(C4EpamApi.java:149) - ---
+[2023-08-25 14:22:05,737][]  INFO(C4EpamApi.java:153) - Request checked-in
+[2023-08-25 14:22:05,801][]  INFO(C4EpamApi.java:157) - Signed out
+[2023-08-25 14:22:05,801][]  INFO(C4EpamApi.java:159) - *****************************************************************************************************
+[2023-08-25 14:22:05,802][]  INFO(CdbConnectionMgr.java:67) - Pool created successfully for : c4.dbPool.c4security
+[2023-08-25 14:22:05,802][]  INFO(LoadRskuDBService.java:94) - All C4 DB Accounts Created Done..........
+[2023-08-25 14:22:05,996][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.hp.c4.rsku.rSku.controller.HomeController.test(javax.servlet.http.HttpServletResponse) throws java.io.IOException
+[2023-08-25 14:22:05,998][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/defaultMotTradingExp],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.hp.c4.rsku.rSku.rest.controller.MOTTradingExpenseController.getDefaultMotExpense()
+[2023-08-25 14:22:05,999][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/getAllPLMasks],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.hp.c4.rsku.rSku.rest.controller.PLMaskElementsController.getAllPLMasks()
+[2023-08-25 14:22:05,999][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/allPriceDescriptors],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.hp.c4.rsku.rSku.rest.controller.PriceDescriptorsController.getAllPricetermMapping()
+[2023-08-25 14:22:06,000][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/getAllDefaultCntryPriceDescriptors],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.hp.c4.rsku.rSku.rest.controller.PriceDescriptorsController.getAllDefaultCntryPriceDescriptors()
+[2023-08-25 14:22:06,001][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/getC4ExplicitMccsCost],methods=[POST],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.hp.c4.rsku.rSku.rest.controller.RSkuRequestController.getC4ExplicitMccsCost(com.hp.c4.rsku.rSku.bean.request.RSkuRequest) throws java.lang.Exception
+[2023-08-25 14:22:06,001][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/getC4RskuCost],methods=[POST],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.hp.c4.rsku.rSku.rest.controller.RSkuRequestController.getC4RskuCost(com.hp.c4.rsku.rSku.bean.request.RSkuRequest) throws java.lang.Exception
+[2023-08-25 14:22:06,002][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/allEpamPwd],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.hp.c4.rsku.rSku.rest.epam.controller.EpamBean> com.hp.c4.rsku.rSku.rest.epam.controller.EpamController.allDatabasePasswords() throws com.fasterxml.jackson.core.JsonParseException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException,java.lang.Exception
+[2023-08-25 14:22:06,003][]  INFO(AbstractHandlerMethodMapping.java:220) - Mapped "{[/epam/{user_name}/{service_name}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.hp.c4.rsku.rSku.rest.epam.controller.EpamController.getEpamApiPwd(java.lang.String,java.lang.String) throws com.fasterxml.jackson.core.JsonParseException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException,java.lang.Exception
+[2023-08-25 14:22:06,034][]  INFO(AbstractUrlHandlerMapping.java:314) - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2023-08-25 14:22:06,117][]  INFO(RequestMappingHandlerAdapter.java:518) - Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringDispatcher-servlet': startup date [Fri Aug 25 14:22:01 IST 2023]; parent: Root WebApplicationContext
+[2023-08-25 14:22:06,184][]  INFO(ExceptionHandlerExceptionResolver.java:267) - Detected @ExceptionHandler methods in globalExceptionHandler
+[2023-08-25 14:22:58,800][]  INFO(C4CostProcessingService.java:145) - All PL Masking Elements & Default (Cost Elements & MOT) initialized completes : 52
+[2023-08-25 14:23:45,049][]  INFO(C4MCCCostProcessingService.java:58) - Mcc Codes initialized completes : 44
+[2023-08-25 14:23:45,074][]  INFO(FrameworkServlet.java:503) - FrameworkServlet 'SpringDispatcher': initialization completed in 103459 ms
+[2023-08-25 14:27:55,492][]  INFO(RSkuRequestController.java:41) - Accessing C4 Explicit MCC cost Request service........ 
+[2023-08-25 14:27:55,493][]  INFO(C4CostProcessingService.java:167) - Performing C4 RSKU request user input Validations.......
+[2023-08-25 14:27:58,051][]  INFO(Cache.java:230) - getAllPricetermMapping:{DF=DDUTX, PR=CPTTX, EX=FCATX, NC=DDUTX, IN=FCATX, OT=VTRDX, GN=DDUTX, DP=VTRDX, UB=VTRDX, ER=DDUTX, RP=VTRDX, TR=CIPTX}
+[2023-08-25 14:28:00,328][]  INFO(ValidateC4RskuRequest.java:243) - Consolidate the Cost Dates into Weekly,Monthly & Quarterly....
+[2023-08-25 14:28:00,333][]  INFO(ValidateC4RskuRequest.java:246) - Requested Query Date :2019/04/01:[2019/04/01, 2019/04/01, 2019/02/01]
+[2023-08-25 14:28:00,333][]  INFO(ValidateC4RskuRequest.java:271) - C4 Dates are avialble....[01-Apr-19, 01-Apr-19, 01-Feb-19]
+[2023-08-25 14:28:00,333][]  INFO(ValidateC4RskuRequest.java:179) - Performing C4 RSKU request Service account Validations initilizing.......$bmiservice001:product not loaded in hierarchy
+[2023-08-25 14:28:00,337][]  INFO(LoginDelegate.java:70) - Calling authenticate method ----> 
+[2023-08-25 14:28:00,339][]  INFO(LoginDelegate.java:71) - loginId --------->$bmiservice001
+[2023-08-25 14:28:00,340][]  INFO(LoginDelegate.java:72) - app_name -------->C4RSKU
+[2023-08-25 14:28:01,165][]  INFO(LoginDelegate.java:78) - temp ----->NO USERS FOUND.
+[2023-08-25 14:28:01,165][]  INFO(LoginDelegate.java:96) - email_auth ------------>false
+[2023-08-25 14:28:01,170][]  INFO(LDAPUtil.java:119) - HPI Keystore file=/opt/sasuapps/c4/global_resources/keystore_ca.cer
+[2023-08-25 14:28:01,171][]  INFO(LDAPUtil.java:122) - HPI Keystore file /opt/sasuapps/c4/global_resources/keystore_ca.cer is not accessible
+[2023-08-25 14:28:01,408][]  INFO(LDAPUtil.java:674) - Service account level authentication is Scucess---->CN=$bmiservice001@AUTH.hpicorp.net,OU=Service,OU=Accounts,DC=auth,DC=hpicorp,DC=net
+[2023-08-25 14:28:01,408][]  INFO(LoginDelegate.java:125) - isServiceAccountLevel----> true: app_nameC4RSKU
+[2023-08-25 14:28:02,159][]  INFO(LoginDelegate.java:131) - The Result of Authentication ---------->03BC8AC2D5171A30E0631B0C3F0FEC05
+[2023-08-25 14:28:02,160][]  INFO(C4CostProcessingService.java:188) - Pass the C4 Cost dates validation....Completes[01-Apr-19, 01-Apr-19, 01-Feb-19]
+[2023-08-25 14:28:02,160][]  INFO(C4CostProcessingService.java:192) - Pass the Price Descriptor validation....CompletesDefaultPriceDescriptor [twoLetterCntry=MY, country=Malaysia, geoCode=557, region=AP, priceCountryCode=MY, priceCurrencyCode=MD, priceTermCode=DP, defaultDelivery=VTRDX]
+[2023-08-25 14:28:02,160][]  INFO(Cache.java:612) - Get the C4 T_PERIOD id's from C4 Table......
+[2023-08-25 14:28:02,880][]  INFO(C4CostProcessingService.java:195) - C4 PEriod ID's are available{W=TPeriodData [periodId=1066, periodType=W, startDate=2019-04-01], M=TPeriodData [periodId=1257, periodType=M, startDate=2019-04-01], Q=TPeriodData [periodId=1310, periodType=Q, startDate=2019-02-01]}
+[2023-08-25 14:28:02,880][]  INFO(C4CostProcessingService.java:1198) - Actual SKU's received from Rsku Request:4
+[2023-08-25 14:28:02,880][]  INFO(C4CostProcessingService.java:1227) - Uniques SKU's from RSKU request:4
+[2023-08-25 14:28:02,881][]  INFO(C4CostProcessingService.java:1287) - PL Mapping for the Requested Base SKU's
+[2023-08-25 14:28:04,777][]  INFO(C4CostProcessingService.java:1317) - Checking for SKU's are Valid PL's which belongs to HPI/Not........
+[2023-08-25 14:28:04,778][]  INFO(C4CostProcessingService.java:1351) - Getting the Permissions for the Pls statred......
+[2023-08-25 14:28:04,786][]  INFO(PermissionDelegate.java:85) - Entry of getPermissions(...)  --------------->
+[2023-08-25 14:28:05,838][]  INFO(PermissionDAO.java:298) - C4-Session ID :03BC8AC2D5171A30E0631B0C3F0FEC05 : READ : 
+[2023-08-25 14:28:05,838][]  INFO(PermissionDAO.java:302) - Callling {call PERMISSION.getpermissions(?,?,?,?)}
+[2023-08-25 14:28:05,971][]  INFO(PermissionDelegate.java:166) - The result of getPermissions - Map ------->{PQ AP=1, PQ WW=1, 2Q WW=1, 2Q AP=1, 7T WW=1, 7T AP=1}
+[2023-08-25 14:28:06,037][]  INFO(C4CostProcessingService.java:1401) - User requested Access Denied Info : :{}
+[2023-08-25 14:28:06,037][]  INFO(C4CostProcessingService.java:1402) - User requested Access Products Info : :[[F2A67A|null|null|null], [F2A67A|null|null|DRB], [D9L63A|null|null|4HB], [G3Q75A|null|null|4GB]]
+[2023-08-25 14:28:06,037][]  INFO(C4CostProcessingService.java:1403) - Getting the Permissions for the Pls Done......
+[2023-08-25 14:28:06,038][]  INFO(C4CostProcessingService.java:203) - Delivery Method:Delivered Duty Paid
+[2023-08-25 14:28:06,038][]  INFO(C4CostProcessingService.java:211) - Cost dates Weekly,Monthly,Qarterly......[01-Apr-19, 01-Apr-19, 01-Feb-19]
+[2023-08-25 14:28:06,040][]  INFO(C4CostProcessingService.java:255) - Month Date:.......2019/04/01
+[2023-08-25 14:28:06,041][]  INFO(C4MCCCostProcessingService.java:105) - Products Without MCC:[[F2A67A|null|null|null], [F2A67A|null|null|DRB], [D9L63A|null|null|4HB], [G3Q75A|null|null|4GB]]
+[2023-08-25 14:28:07,594][]  INFO(C4MCCCostProcessingService.java:125) - Products With MCC:[[F2A67A|null|null|null], [F2A67A|null|null|DRB], [D9L63A|null|null|4HB], [G3Q75A|null|null|4GB], [F2A67A|null|null|DRB]]
+[2023-08-25 14:28:07,595][]  INFO(Cache.java:612) - Get the C4 T_PERIOD id's from C4 Table......
+[2023-08-25 14:28:08,339][]  INFO(C4MCCCostProcessingService.java:145) - C4 PEriod ID's are available{W=TPeriodData [periodId=1066, periodType=W, startDate=2019-04-01], M=TPeriodData [periodId=1257, periodType=M, startDate=2019-04-01], Q=TPeriodData [periodId=1310, periodType=Q, startDate=2019-02-01]}
+[2023-08-25 14:28:08,339][]  INFO(C4MCCCostProcessingService.java:269) - Opex Cos Type=OPEXP_TYPE
+[2023-08-25 14:28:08,469][]  INFO(C4AggregateCostCalculationRepo.java:735) - Opex Finder: Value Based Cost Elements Size =0
+[2023-08-25 14:28:09,259][]  INFO(C4MCCCostProcessingService.java:263) - Opex Value Type=OPEXP_VALUE_TYPE
+[2023-08-25 14:28:09,388][]  INFO(C4AggregateCostCalculationRepo.java:735) - Opex Finder: Value Based Cost Elements Size =0
+[2023-08-25 14:28:10,176][]  INFO(C4MCCCostProcessingService.java:263) - Opex Value Type=OPEXP_VALUE_TYPE
+[2023-08-25 14:28:10,303][]  INFO(C4AggregateCostCalculationRepo.java:735) - Opex Finder: Value Based Cost Elements Size =0
+[2023-08-25 14:28:11,095][]  INFO(C4MCCCostProcessingService.java:263) - Opex Value Type=OPEXP_VALUE_TYPE
+[2023-08-25 14:28:11,222][]  INFO(C4AggregateCostCalculationRepo.java:735) - Opex Finder: Value Based Cost Elements Size =0
+[2023-08-25 14:28:12,010][]  INFO(C4MCCCostProcessingService.java:263) - Opex Value Type=OPEXP_VALUE_TYPE
+[2023-08-25 14:28:12,140][]  INFO(C4AggregateCostCalculationRepo.java:735) - Opex Finder: Value Based Cost Elements Size =0
+[2023-08-25 14:28:12,204][]  INFO(Cache.java:612) - Get the C4 T_PERIOD id's from C4 Table......
+[2023-08-25 14:28:12,918][]  INFO(C4MCCCostProcessingService.java:204) - C4 PEriod ID's are available{W=TPeriodData [periodId=1066, periodType=W, startDate=2019-04-01], M=TPeriodData [periodId=1257, periodType=M, startDate=2019-04-01], Q=TPeriodData [periodId=1310, periodType=Q, startDate=2019-02-01]}
+[2023-08-25 14:28:12,919][]  INFO(C4MCCCostProcessingService.java:249) - CCos Cos Type=COS_TYPE
+[2023-08-25 14:28:12,919][]  INFO(C4AggregateCostCalculationRepo.java:192) - Extracting the C4 cost for Valid Sku's ..................
+[2023-08-25 14:28:14,371][]  INFO(C4AggregateCostCalculationRepo.java:288) - CCos Finder: Value Based Cost Elements Size = 6
+[2023-08-25 14:28:15,170][]  INFO(C4MCCCostProcessingService.java:243) - CCos Value Type=COS_VALUE_TYPE
+[2023-08-25 14:28:15,171][]  INFO(C4AggregateCostCalculationRepo.java:192) - Extracting the C4 cost for Valid Sku's ..................
+[2023-08-25 14:28:15,309][]  INFO(C4AggregateCostCalculationRepo.java:288) - CCos Finder: Value Based Cost Elements Size = 1
+[2023-08-25 14:28:16,104][]  INFO(C4MCCCostProcessingService.java:243) - CCos Value Type=COS_VALUE_TYPE
+[2023-08-25 14:28:16,105][]  INFO(C4AggregateCostCalculationRepo.java:192) - Extracting the C4 cost for Valid Sku's ..................
+[2023-08-25 14:28:16,240][]  INFO(C4AggregateCostCalculationRepo.java:288) - CCos Finder: Value Based Cost Elements Size = 1
+[2023-08-25 14:28:17,035][]  INFO(C4MCCCostProcessingService.java:243) - CCos Value Type=COS_VALUE_TYPE
+[2023-08-25 14:28:17,035][]  INFO(C4AggregateCostCalculationRepo.java:192) - Extracting the C4 cost for Valid Sku's ..................
+[2023-08-25 14:28:17,171][]  INFO(C4AggregateCostCalculationRepo.java:288) - CCos Finder: Value Based Cost Elements Size = 0
+[2023-08-25 14:28:17,956][]  INFO(C4MCCCostProcessingService.java:243) - CCos Value Type=COS_VALUE_TYPE
+[2023-08-25 14:28:17,957][]  INFO(C4AggregateCostCalculationRepo.java:192) - Extracting the C4 cost for Valid Sku's ..................
+[2023-08-25 14:28:18,086][]  INFO(C4AggregateCostCalculationRepo.java:288) - CCos Finder: Value Based Cost Elements Size = 1
+[2023-08-25 14:28:18,150][]  INFO(C4CostProcessingService.java:614) - Extract C4 Cost elemnts  is started...... 
+[2023-08-25 14:28:18,150][]  INFO(C4CostProcessingService.java:658) - {[F2A67A|null|null|null]={MATRL=413.04, VWRTY=27.19, OVBLC=0.0, VRLTY=0.0, OFXDC=0.2, VTRDX=28.5}}
+[2023-08-25 14:28:18,151][]  INFO(C4CostProcessingService.java:659) - {[F2A67A|null|null|DRB]={MATRL=31.73}, [D9L63A|null|null|4HB]={MATRL=10.0}, [G3Q75A|null|null|4GB]={}, [F2A67A|null|null|DRB]={MATRL=31.73}}
+[2023-08-25 14:28:18,151][]  INFO(C4CostProcessingService.java:897) - Calculating the C4 Total Cost started processing.......
+[2023-08-25 14:28:20,010][]  INFO(C4CostProcessingService.java:1135) - C4 Product Cost is Avaliable for the requested SKU's .......
+[2023-08-25 14:28:20,011][]  INFO(C4CostProcessingService.java:927) - Calculating the C4 Total Cost Ends .......
+[2023-08-25 14:28:20,011][]  INFO(C4CostProcessingService.java:683) - Calculating the C4 MCC Cost started processing.......
+[2023-08-25 14:28:24,929][]  INFO(C4MccPLConversionService.java:180) - getSPLByGPLWithTC::DRB|PQ|HPI
+[2023-08-25 14:28:24,931][]  INFO(C4MccPLConversionService.java:197) - makeKeyWithTC:PQ:DRB:1:HPI
+[2023-08-25 14:28:24,932][]  INFO(C4MccPLConversionService.java:214) - C4Key:PQ|DR*
+[2023-08-25 14:28:24,932][]  INFO(C4MccPLConversionService.java:239) - SF Map Used: HPI:SFMapToUse : {00=53, PQ=53, PR=53, A5=53, R4=09, R6=07, AE=53, R7=09, 16=53, AG=53, AH=53, 19=53, AK=53, AN=08, B2=09, 1D=53, AU=07, B7=07, 1J=53, 1M=07, 1N=07, 1O=53, 21=07, 1P=09, BO=08, 2A=07, BQ=07, SB=07, 2B=53, 2C=08, 2D=53, C5=53, 2G=07, 2H=07, 2N=07, 30=53, 2P=09, T2=53, 2Q=53, T4=53, ST=53, 2U=53, TA=08, TB=08, CY=53, DA=53, 3U=53, TW=53, DG=08, TX=07, TY=07, 3Y=07, TZ=07, E0=53, UA=53, E4=53, UD=53, E5=53, DU=07, 4H=07, UI=53, DY=07, 4I=53, UK=07, 4L=53, 4M=53, UN=53, UO=53, 4O=53, 52=07, UR=07, US=08, ED=53, UT=08, 4S=53, 4T=08, EE=53, UV=08, 4V=53, 4X=53, EO=53, F1=53, F2=09, F3=53, F4=53, 5D=09, F7=53, VG=53, F8=09, EX=53, VI=53, VJ=07, EZ=08, VK=07, 5M=07, FB=53, 63=09, 5S=53, 64=53, FD=08, 5T=53, 65=53, 5U=08, FF=08, 67=53, FG=53, FH=08, 5X=08, FL=53, FO=09, G0=53, 6A=53, 6B=09, G7=08, G8=53, G9=07, 6J=07, GA=08, GB=08, 6Q=09, GC=07, WS=07, GD=07, GE=53, GF=53, 6U=08, GG=08, 6V=07, GH=08, GI=09, 6X=07, GJ=53, GK=53, GL=53, GM=53, GN=53, GO=53, GP=07, GQ=53, GR=53, 7B=09, GS=53, GT=53, GU=07, GV=07, 7F=08, GW=53, GX=53, GY=53, GZ=09, 7S=07, 7T=07, HF=53, 7V=07, HK=0, I0=08, HO=53, I1=08, HP=53, 8A=53, HQ=07, I2=53, 8J=08, 8N=08, IA=53, 91=09, IB=07, ID=53, IE=07, IF=07, IG=53, 8W=08, IK=08, IL=08, IM=53, IQ=08, IR=53, 9C=53, IS=53, IT=53, IU=53, 9F=08, IV=53, 9G=07, IW=53, 9H=08, IX=07, IY=53, 9J=07, IZ=07, 9K=53, 9L=53, 9M=53, JB=53, 9R=53, 9S=53, 9T=08, JH=53, JJ=53, JP=53, JQ=19, K2=09, K4=53, K5=07, K6=53, K7=53, K8=53, JZ=53, KD=53, KE=53, KF=53, KG=53, KP=07, KS=53, KU=53, L6=53, KV=07, L7=53, L8=53, L9=53, LD=0, LE=53, LG=07, LO=07, M0=08, M1=08, M2=08, LR=53, M3=07, LS=07, M4=09, M5=07, LU=07, M6=07, M7=07, LW=09, M8=07, LX=53, LY=53, LZ=53, MA=53, MB=53, MC=53, MF=07, MG=53, MK=07, ML=53, MN=07, N0=53, MP=08, N1=53, MQ=19, N2=07, N3=07, MS=07, N4=07, N5=07, N6=07, N7=53, N8=07, N9=53, NB=08, ND=07, NE=0, NF=0, NG=08, NI=08, NJ=08, NK=07, NL=07, NM=53, NO=53, NP=07, NQ=07, NR=53, NS=07, NU=07, P1=07, P2=07, P3=07, P4=53}: gplPQ
+[2023-08-25 14:28:24,932][]  INFO(C4MccPLConversionService.java:243) - 53for GPL: PQ
+[2023-08-25 14:28:24,932][]  INFO(C4MccPLConversionService.java:249) - 53|PQ|DR*
+[2023-08-25 14:28:24,933][]  INFO(C4MccPLConversionService.java:268) - MCC SPL table used: HPI
+[2023-08-25 14:28:24,934][]  INFO(C4MccPLConversionService.java:276) - SPL for the C4Key53|PQ|DR* is 64
+[2023-08-25 14:28:24,934][]  INFO(C4CostProcessingService.java:793) - Calculating the C4 MCC Cost started Ends.......
+[2023-08-25 14:28:24,935][]  INFO(C4CostProcessingService.java:667) - Extract C4 Cost elemnts is Done...... 
+[2023-08-25 14:28:24,935][]  INFO(C4MCCCostProcessingService.java:135) - Opex Cost Elements={[F2A67A|null|null|null]=[], [F2A67A|null|null|DRB]=[], [D9L63A|null|null|4HB]=[], [G3Q75A|null|null|4GB]=[], [F2A67A|null|null|DRB]=[]}
+[2023-08-25 14:28:24,935][]  INFO(C4MCCCostProcessingService.java:136) - CCost Elements={[F2A67A|null|null|null]=[C4CostData [SKU=F2A67A|null|null|null], elementType=MATRL, periodId=1257, geoCode=557, cost=413.04,type=COS_TYPE], C4CostData [SKU=F2A67A|null|null|null], elementType=OFXDC, periodId=1257, geoCode=557, cost=0.2,type=COS_TYPE], C4CostData [SKU=F2A67A|null|null|null], elementType=OVBLC, periodId=1257, geoCode=557, cost=0.0,type=COS_TYPE], C4CostData [SKU=F2A67A|null|null|null], elementType=VRLTY, periodId=1257, geoCode=557, cost=0.0,type=COS_TYPE], C4CostData [SKU=F2A67A|null|null|null], elementType=VTRDX, periodId=1257, geoCode=557, cost=28.5,type=COS_TYPE], C4CostData [SKU=F2A67A|null|null|null], elementType=VWRTY, periodId=1257, geoCode=557, cost=27.19,type=COS_TYPE]], [F2A67A|null|null|DRB]=[C4CostData [SKU=F2A67A|null|DRB|null], elementType=MATRL, periodId=1257, geoCode=557, cost=31.73,type=COS_VALUE_TYPE]], [D9L63A|null|null|4HB]=[C4CostData [SKU=D9L63A|null|4HB|null], elementType=MATRL, periodId=1257, geoCode=557, cost=10.0,type=COS_VALUE_TYPE]], [G3Q75A|null|null|4GB]=[], [F2A67A|null|null|DRB]=[C4CostData [SKU=F2A67A|null|DRB|null], elementType=MATRL, periodId=1257, geoCode=557, cost=31.73,type=COS_VALUE_TYPE]]}
+[2023-08-25 14:28:24,935][]  INFO(RSkuRequestController.java:45) - ################################ SERVICE ENDS ################ 29

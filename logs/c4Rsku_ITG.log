@@ -1,0 +1,31 @@
+[2022-06-22T11:09:39.039Z] [org.springframework.boot.StartupInfoLogger] [55] [INFO ] Starting RSkuApplication using Java 1.8.0_201 on DESKTOP-RUG5JL2 with PID 26080 (D:\Pervez\C4\RSKU_Project\rSku\target\classes started by mohammap in D:\Pervez\C4\RSKU_Project\rSku)
+[2022-06-22T11:09:39.039Z] [org.springframework.boot.StartupInfoLogger] [56] [DEBUG] Running with Spring Boot v2.5.4, Spring v5.3.9
+[2022-06-22T11:09:39.039Z] [org.springframework.boot.SpringApplication] [663] [INFO ] The following profiles are active: itg
+[2022-06-22T11:09:39.039Z] [org.springframework.boot.logging.DeferredLog] [255] [INFO ] The Class-Path manifest attribute in D:\Users\mohammap\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.1.0.0\ojdbc8-21.1.0.0.jar referenced one or more files that do not exist: file:/D:/Users/mohammap/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.1.0.0/oraclepki.jar
+[2022-06-22T11:09:39.039Z] [org.springframework.boot.logging.DeferredLog] [255] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2022-06-22T11:09:39.039Z] [org.springframework.boot.logging.DeferredLog] [255] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2022-06-22T11:09:41.041Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [132] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-06-22T11:09:41.041Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [201] [INFO ] Finished Spring Data repository scanning in 131 ms. Found 0 JPA repository interfaces.
+[2022-06-22T11:09:43.043Z] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [108] [INFO ] Tomcat initialized with port(s): 8081 (http)
+[2022-06-22T11:09:43.043Z] [org.apache.juli.logging.DirectJDKLog] [173] [INFO ] Starting service [Tomcat]
+[2022-06-22T11:09:43.043Z] [org.apache.juli.logging.DirectJDKLog] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2022-06-22T11:09:43.043Z] [org.apache.juli.logging.DirectJDKLog] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2022-06-22T11:09:43.043Z] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [290] [INFO ] Root WebApplicationContext: initialization completed in 3820 ms
+[2022-06-22T11:09:43.043Z] [com.zaxxer.hikari.HikariDataSource] [110] [INFO ] HikariPool-1 - Starting...
+[2022-06-22T11:09:45.045Z] [com.zaxxer.hikari.HikariDataSource] [123] [INFO ] HikariPool-1 - Start completed.
+[2022-06-22T11:09:45.045Z] [org.hibernate.jpa.internal.util.LogHelper] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-06-22T11:09:45.045Z] [org.hibernate.Version] [44] [INFO ] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2022-06-22T11:09:46.046Z] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [56] [INFO ] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-06-22T11:09:46.046Z] [org.hibernate.dialect.Dialect] [175] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+[2022-06-22T11:09:48.048Z] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [52] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-06-22T11:09:48.048Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-06-22T11:09:49.049Z] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [219] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-06-22T11:09:49.049Z] [com.hp.c4.rsku.rSku.configuration.LoadRskuDBService] [46] [INFO ] Loading All C4 DB properties into C4 Env = ITG:../property/c4_rsku_ITG.properties
+[2022-06-22T11:09:49.049Z] [com.hp.c4.rsku.rSku.configuration.LoadRskuDBService] [63] [ERROR] Inside exception of Cemailer constructor ---- ..\property\c4_rsku_ITG.properties (The system cannot find the path specified)
+[2022-06-22T11:09:49.049Z] [com.hp.c4.rsku.rSku.configuration.LoadRskuDBService] [101] [ERROR] Error: null
+[2022-06-22T11:09:49.049Z] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [58] [INFO ] LiveReload server is running on port 35729
+[2022-06-22T11:09:50.050Z] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [220] [INFO ] Tomcat started on port(s): 8081 (http) with context path ''
+[2022-06-22T11:09:50.050Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [120] [INFO ] Context refreshed
+[2022-06-22T11:09:50.050Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [123] [INFO ] Found 1 custom documentation plugin(s)
+[2022-06-22T11:09:50.050Z] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [41] [INFO ] Scanning for api listing references
+[2022-06-22T11:09:51.051Z] [org.springframework.boot.StartupInfoLogger] [61] [INFO ] Started RSkuApplication in 12.766 seconds (JVM running for 14.078)

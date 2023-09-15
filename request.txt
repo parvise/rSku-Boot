@@ -1,0 +1,70 @@
+
+Request 1 : Which has cost
+{
+  "costDate": "2021/10/20",
+  "countryCode": "TW",
+  "deliveryMethod": "DDP",
+  "connect": {
+    "password": "van.rat-90",
+    "userName": "$eclipsec4001"
+  },
+  "listOfProducts": [
+    {
+      "prodIdBase": "20C02AV"     
+    },
+	{
+      "prodIdBase": "20C27AV"
+    },
+	{
+      "prodIdBase": "20B59AV"
+    },
+	{
+      "prodIdBase": "20C06AV"
+    }
+  ],
+  "mot": "Air",
+  "outputCurrency": "USD",
+  "rapidSku": {
+    "pl": "2Q",
+    "product": {
+      "rSkuDec": "Test Rsku Testing",
+      "rSkuProd": "R345TV"
+    }
+  }
+}
+
+	
+$bmiservice001
+as.they.mug.ratio-09132
+	
+
+Request 2 : Which has No Cost
+{
+  "costDate": "2021/10/20",
+  "countryCode": "US",
+  "deliveryMethod": "DDP",
+  "listOfProducts": [
+    {
+      "prodIdBase": "20C02AV"     
+    },
+	{
+      "prodIdBase": "20C27AV"
+    },
+	{
+      "prodIdBase": "20B59AV"
+    },
+	{
+      "prodIdBase": "20C06AV"
+    }
+  ],
+  "mot": "Air",
+  "outputCurrency": "USD",
+  "rapidSku": {
+    "pl": "2Q",
+    "product": {
+      "rSkuDec": "Test Rsku Testing",
+      "rSkuProd": "R345TP"
+    }
+  }
+}
+
